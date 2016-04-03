@@ -15,6 +15,9 @@ Branches are useful for experimental features, localizations, and other signific
 How do the diagrams help you visualize the branch structure?
 By showing how commits are reachable through branches, and where branches may differ from each other through a non-linear history structure.
 
+What is the result of merging two branches together? Why do we represent it in the diagram the way we do?
+Merging two branches links the lower-order branch head to the higher-order one (could be master) and while the log history of the master branch shows commits in chronological order, commits are connected to their original parent commit, maintaining the structure of both branches.
+
 HELPFUL COMMANDS TO REMEMBER
 git log --graph --oneline master coins (compare visually branches)
 git checkout -b new_branch_name (checks out current staging area into new branch so that it is "reachable"/saved, and not lost when checking out another branch)
