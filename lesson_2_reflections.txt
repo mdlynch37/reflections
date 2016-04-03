@@ -5,3 +5,6 @@ Creates a hidden directory called .git that stores meta-data and version history
 How is the staging area different from the working directory and the repository? What value do you think it offers?
 
 Staging area is unsaved until committed to repository. It allows for multiple files to be grouped together before adding a commit with them all.
+
+How can you use the staging area to make sure you have one commit per logical change?
+By grouping modified files together for a particular commit
