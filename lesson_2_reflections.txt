@@ -18,7 +18,11 @@ By showing how commits are reachable through branches, and where branches may di
 What is the result of merging two branches together? Why do we represent it in the diagram the way we do?
 Merging two branches links the lower-order branch head to the higher-order one (could be master) and while the log history of the master branch shows commits in chronological order, commits are connected to their original parent commit, maintaining the structure of both branches.
 
+What are the pros and cons of Git’s automatic merging vs. always doing merges manually?
+Pros: saves times
+Cons: can lack granularity, make things less clear.
+
 HELPFUL COMMANDS TO REMEMBER
-git log --graph --oneline master coins (compare visually branches)
+git log --graph --oneline master coins (compare branches visually, also see tools like gliffy and yUML)
 git checkout -b new_branch_name (checks out current staging area into new branch so that it is "reachable"/saved, and not lost when checking out another branch)
 git show [commit id] (checks against parents, useful when comparing changes across previously merged branches)
