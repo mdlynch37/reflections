@@ -1,13 +1,13 @@
 What happens when you initialize a repository? Why do you need to do it?
 
-Creates a hidden directory called .git that stores meta-data and version history as changes are made through git
+Creates a hidden directory called .git that stores meta-data and version history as commits are added to git
 
 How is the staging area different from the working directory and the repository? What value do you think it offers?
 
-Staging area is unsaved until committed to repository. It allows for multiple files to be grouped together before adding a commit with them all.
+A commit updates the snapshot of the repository according to changes made to files first added to the staging area. It allows for multiple updated files to be grouped together for the next commit. The repository contains these linked commits, whereas the working directory is the state of the repository at the current HEAD (correct term??) plus any changes yet to be committed.
 
 How can you use the staging area to make sure you have one commit per logical change?
-By grouping modified files together for a particular commit
+By grouping together files that have updates related to a commit's one logical change.
 
 What are some situations when branches would be helpful in keeping your history organized? How would branches help?
 Branches are useful for experimental features, localizations, and other significant deviations from the master branch. They also preserve the state of the master/parent branch at the time the child branch is created so that updates to the parent branch do not "break" interactions with previously created branch children.
@@ -26,3 +26,4 @@ HELPFUL COMMANDS TO REMEMBER
 git log --graph --oneline master coins (compare branches visually, also see tools like gliffy and yUML)
 git checkout -b new_branch_name (checks out current staging area into new branch so that it is "reachable"/saved, and not lost when checking out another branch)
 git show [commit id] (checks against parents, useful when comparing changes across previously merged branches)
+git diff (summary of changes flag?)??
