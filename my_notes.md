@@ -31,7 +31,9 @@ Easier to logically divide up your work than have big beefy branches
 >![fast_forward_merge](images/ff_merge.png)
 
 
-
+Solarized dark             |  Solarized Ocean
+:-------------------------:|:-------------------------:
+![merge](images/simple_merge.png)  |  ![fast_forward_merge](images/ff_merge.png)
 
 ---
 ### From [Visualizing Git Concepts with D3](http://onlywei.github.io/explain-git-with-d3)
