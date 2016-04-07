@@ -54,8 +54,12 @@ Example:
 
 #### Navigating Git
 
-**HEAD**: currently checked out commit, determines working directory. Usually points to a branch show in parenthesis on cmd like `(master) <current-dir> $`
+**HEAD**: currently checked out commit, determines working directory. Usually points to a branch show in parenthesis on cmd like `(master) <current-dir> $`.
+- Detached HEAD: when a specific commit has been checked out (not a branch). Changes can be saved into a new branch with `git checkout -b <new_branch>`, otherwise if `checkout` is done, those changes will be lost.
 
+**Relative Refs**: Moves HEAD relative to current place.
+- For branches: `git checkout master^` moves HEAD to parent of master (`master^^` to grandparent, etc.)
+- For detached HEAD: `git checkout HEAD^`, etc.
 
 
 
