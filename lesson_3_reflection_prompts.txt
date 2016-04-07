@@ -1,3 +1,5 @@
+
+
 When would you want to use a remote repository rather than keeping all your work
 local?
 
@@ -28,7 +30,8 @@ and what would be harder?
 When would you want to make changes in a separate branch rather than directly in
 master?  What benefits does each approach have?
 
-    Fill in your answer here
+    When working in teams where multiple people are making changes to the master during the same period, in which conflicts will arise. Also, when doing experimental features etc. where you would want the main app to be preserved.
+    Directly in master is simpler, faster. Using branches allows for multiple new features to be developed and/or by multiple people where the master branch can be preserved as the base of the project.
 
 OTHER NOTES
 pull = fetch (just inspect) + merge (git merge origin/master master)
@@ -37,3 +40,7 @@ Fast-forward merging (simply moving master pointer to parent, only when two bran
     -Makes sense, because then the pull request merge is evident in the commit history (with an auto generated template to indicate a pull request merge)
 When using a branch just for pull request, it should be deleted once pull request is complete.
 Purpose of pull request (rather than just merging locally then pushing to GitHub) is to communicate changes with team members.
+Workflow for working with more branches than just master:
+    "Rather than simply pulling and pushing, you need to pull changes into your local master branch, merge the local master into your branch (different-oil, in our case), then push your branch to the remote before finally merging your branch into master, either locally or on GitHub."
+
+    "You could make your changes directly to the master branch in your fork, but when contributing to a public repository, it’s standard practice to make the changes in a non-master branch within the fork. This way, you can easily keep your master branch up-to-date with master of the original repository, and merge changes from master into your branch when you are ready."
