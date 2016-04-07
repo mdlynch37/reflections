@@ -1,7 +1,7 @@
 ### Questions
-- [ ]
+- [ ] How to walk back from a commit (move master pointer back to earlier commit?)
 
-- [x] list syntax required (any unordered or ordered list supported)
+- [ ]
 ---
 
 ### Misc Notes
@@ -12,28 +12,52 @@
 ### From [Learn Git Branching](http://pcottle.github.io/learnGitBranching)
 
 
-`git commit -a -m <msg>`
+**New commit**: `git commit -a -m <msg>`
 
 Git enthusiasts:
 > Branch early, branch often
 
-Easier to logically divide up your work than have big beefy branches
+"Easier to logically divide up your work than have big beefy branches."
 
-`git checkout -b <new_branch>` = `git branch <new_branch>` + `git checkout <branch>`
+**New branch**:
+`git checkout -b <new_branch>` (`git branch <new_branch>` + `git checkout <branch>`)
 
-`(branchA) git merge <branchB>` creates a special commit that has two unique parents. "Merges branchA into branchB"
-* This is the result of merging bugFix into master
+**Merge**: `(branchA) git merge <branchB>` creates a special commit that has two unique parents. "Merges branchA into branchB".
+- Exception: "Fast-forward" merge occurs when a branch is merged into one of its children, in which case only moving the active branches' pointer is necessary.
 
->![merge](images/simple_merge.png)
+Example:
 
-* Subsequently, this is the result of merging bugFix into master, a **fast-forward merge**.
+   (0)     |    (1) reg. merge     |      (2) fast-forward merge        |
+:---------:|:-----------------:|:---------------- :
+ start     | `(master) git merge bugFix` | `(bugFix) merge master`
+"merge... ->"   |      bugFix into master     |master into bugFix
+![before merge][bM] | ![simple merge][sM]  |  ![fast forward merge][ffM]
 
->![fast_forward_merge](images/ff_merge.png)
+[bM]: images/before_merge.png
+[sM]: images/simple_merge.png
+[ffM]: images/ff_merge.png
+
+**Rebasing**: Like merge, combines work across branches, but instead "copies" them, and plops them down somewhere else.
+- Used to make a linear sequence of commits, so that log is more readable (otherwise displays parallel commits in chronological order).
+
+Example:
+
+   (0)     |    (1) reg. rebase     |      (2) fast-forward rebase        |
+:---------:|:-----------------:|:---------------- :
+ start     | `(bugFix) rebase master` | `(master) git rebase bugFix`
+"rebase... ->"   |  bugFix onto master       | master onto bugFix
+![before merge][bRB] | ![simple merge][sRB]  |  ![fast forward merge][ffRB]
+
+[bRB]: images/before_rebase.png
+[sRB]: images/simple_rebase.png
+[ffRB]: images/ff_rebase.png
+
+#### Navigating Git
+
+**HEAD**: currently checked out commit, determines working directory. Usually points to a branch show in parenthesis on cmd like `(master) <current-dir> $`
 
 
-Solarized dark             |  Solarized Ocean
-:-------------------------:|:-------------------------:
-![merge](images/simple_merge.png)  |  ![fast_forward_merge](images/ff_merge.png)
+
 
 ---
 ### From [Visualizing Git Concepts with D3](http://onlywei.github.io/explain-git-with-d3)
