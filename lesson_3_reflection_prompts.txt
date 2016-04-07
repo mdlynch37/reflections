@@ -6,24 +6,34 @@ local?
 Why might you want to always pull changes manually rather than having Git
 automatically stay up-to-date with your remote repository?
 
-    Fill in your answer here
+    If changes are automatically synced, there could be confusion about changes other collaborators may have made to the code.
 
 Describe the differences between forks, clones, and branches.  When would you
 use one instead of another?
 
-    Fill in your answer here
+    Forks are clones of a repo made on GitHub, and point to its origin repo.
+    A clone is an exact copy of a repo.
+    Branches are a linear or non-linear named chain of commits.
 
 What is the benefit of having a copy of the last known state of the remote
 stored locally?
 
-    Fill in your answer here
+    As a reference point to indicate how many commits have been done since syncing      and how to merge with commits added to the remote since last sync.
 
 How would you collaborate without using Git or GitHub?  What would be easier,
 and what would be harder?
 
-    Fill in your answer here
+    Dropbox (for general file types) or Google Drive (for Google's office suite). Code would only work with Dropbox, but merging, comparing and commenting on text within files is not supported so the granularity needed for good collaboration in developing software would not be possible.
 
 When would you want to make changes in a separate branch rather than directly in
 master?  What benefits does each approach have?
 
     Fill in your answer here
+
+OTHER NOTES
+pull = fetch (just inspect) + merge (git merge origin/master master)
+Fast-forward merging (simply moving master pointer to parent, only when two branches are "reachable" by each other)
+    -in GitHub, merging (like with pull request) results in standard merge process (where new commit is created from both branches)
+    -Makes sense, because then the pull request merge is evident in the commit history (with an auto generated template to indicate a pull request merge)
+When using a branch just for pull request, it should be deleted once pull request is complete.
+Purpose of pull request (rather than just merging locally then pushing to GitHub) is to communicate changes with team members.
