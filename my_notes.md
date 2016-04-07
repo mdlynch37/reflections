@@ -5,7 +5,7 @@
 -
 
 ### FROM [Learn Git Branching](http://pcottle.github.io/learnGitBranching/)
-![image](https://www.dropbox.com/s/hnvhbt4qm48zkvg/Screenshot%202016-04-07%2013.43.03.png?dl=0)
+![image](https://www.dropbox.com/s/hnvhbt4qm48zkvg/Screenshot%202016-04-07%2013.43.03.png)
 Sometimes you want numbered lists:
 
 1. One
