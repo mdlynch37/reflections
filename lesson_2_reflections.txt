@@ -23,7 +23,7 @@ Pros: saves times
 Cons: can lack granularity, make things less clear.
 
 HELPFUL COMMANDS TO REMEMBER
-git log --graph --oneline master coins (compare branches visually, also see tools like gliffy and yUML)
+git log --graph --oneline --decorate [opt. master coins] (compare branches visually, also see tools like gliffy and yUML)
 git checkout -b new_branch_name (checks out current staging area into new branch so that it is "reachable"/saved, and not lost when checking out another branch)
 git show [commit id] (checks against parents, useful when comparing changes across previously merged branches)
 git diff (summary of changes flag?)??
