@@ -5,7 +5,13 @@
 ---
 
 ### Misc Notes
-- Good tool: http://onlywei.github.io/explain-git-with-d3
+#### Contributing to a Project
+[chapter 5.2](https://git-scm.com/book/ch5-2.html) from official git reference
+Tip: use `git diff --check` to identify annoying whitespace errors before committing.
+
+**Commenting guidelines**:
+- Generally, top line is summary of max 50 characters, then white space, then detailed explanation (if necessary)
+
 
 
 ---
@@ -67,7 +73,7 @@ Example:
 #### Reversing Changes in Git
 **Reset**: moves a branch backward `n` branches as if it never existed with `git reset HEAD~n`. Does not create new commit; only use locally.
 
-**Revert**: creates new commit for reversion to previous commit with `git revert HEAD` 
+**Revert**: creates new commit for reversion to previous commit with `git revert HEAD`
 
 
 
