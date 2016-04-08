@@ -63,7 +63,7 @@ Example:
 **HEAD**: currently checked out commit, determines working directory. Usually points to a branch show in parenthesis on cmd like `(master) <current-dir> $`.
 - Detached HEAD: when a specific commit has been checked out (not a branch). Changes can be saved into a new branch with `git checkout -b <new_branch>`, otherwise if `checkout` is done, those changes will be lost.
 
-**Relative Refs**: moves HEAD relative to current place.
+**Relative Refs**: Moves HEAD relative to current place.
 - For branches: `git checkout master^` moves HEAD to parent of master (`master^^` to grandparent, etc.)
 - For detached HEAD: `git checkout HEAD^`, etc.
 
@@ -74,8 +74,6 @@ Example:
 **Reset**: moves a branch backward `n` branches as if it never existed with `git reset HEAD~n`. Does not create new commit; only use locally.
 
 **Revert**: creates new commit for reversion to previous commit with `git revert HEAD`
-
-
 
 ---
 ### From [Visualizing Git Concepts with D3](http://onlywei.github.io/explain-git-with-d3)
